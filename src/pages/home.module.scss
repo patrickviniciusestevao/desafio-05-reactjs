@@ -1,0 +1,53 @@
+.post{
+
+  & + .post {
+    margin-top: 48px;
+  }
+
+  strong {
+    font-weight: bold;
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    text-align: justify;
+    letter-spacing: -0.5px;
+    color: var(--white-200);
+
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-align: justify;
+    color: var(--gray-400);
+
+    margin-bottom: 24px;
+  }
+
+  footer{
+    display: flex;
+    align-items: center;
+
+    > div {
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      color: var(--gray-500);
+
+      svg{
+        margin-right: 8px;
+      }
+
+      &:first-child{
+        margin-right: 24px;
+      }
+    }
+  }
+}
+
+.nextPost{
+  border: 0;
+  background: transparent;
+  color: var(--pink-500);
+  text-align: left;
+  margin-top: 4rem;
+}
