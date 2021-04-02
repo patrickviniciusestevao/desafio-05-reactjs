@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
-import { useMemo } from 'react';
+import { useMemo, useEffect } from 'react';
 import { RichText } from 'prismic-dom';
 import { format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
@@ -11,6 +11,7 @@ import Header from '../../components/Header';
 
 import styles from './post.module.scss';
 import commonStyles from '../../styles/common.module.scss';
+import { UtterancesComments } from '../../components/Coments';
 
 interface Post {
   first_publication_date: string | null;
@@ -126,6 +127,7 @@ export default function Post({ post }: PostProps) {
             </div>
           ))}
         </div>
+        <UtterancesComments/>
       </main>
     </>
   );
